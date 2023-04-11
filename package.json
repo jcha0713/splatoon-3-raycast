@@ -15,7 +15,9 @@
     }
   ],
   "dependencies": {
-    "@raycast/api": "^1.49.2"
+    "@raycast/api": "^1.49.2",
+    "@raycast/utils": "^1.5.2",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@raycast/eslint-config": "1.0.5",
