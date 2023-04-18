@@ -1,20 +1,10 @@
 import { ActionPanel, Detail, List, Action } from "@raycast/api";
-import { useFetch } from "@raycast/utils";
-import { z } from "zod";
+import { fetchDataFromAPI } from "./api/schema";
 
 export default function Command() {
-  const { isLoading, error, data: rawData } = useFetch("https://splatoon3.ink/data/schedules.json");
-  const regularSchedules = z.object({
-    startTime: z.string(),
-    endTime: z.string(),
-  });
+  const { isLoading, test: data, revalidate } = fetchDataFromAPI();
 
-  const scheduleNodes = z.object({
-    nodes: z.array(regularSchedules),
-  });
-
-  const parsed = regularSchedules.parse(rawData.data.regularSchedules.nodes);
-  console.log(parsed);
+  console.log(data);
 
   return (
     <List>
