@@ -9,8 +9,8 @@
   "commands": [
     {
       "name": "index",
-      "title": "List Schedule",
-      "description": "Template for showing a static list and a detail view",
+      "title": "Show Regular Schedule",
+      "description": "Show Regular Battle Schedule",
       "mode": "view"
     }
   ],
